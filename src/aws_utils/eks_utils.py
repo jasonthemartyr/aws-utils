@@ -50,7 +50,7 @@ class EKSClusterManager:
             # print(response)
             # policy = client.associate_access_policy(
             #                                             clusterName=cluster_name,
-            #                                             principalArn='arn:aws:iam::617292774228:role/sandbox-nuke',
+            #                                             principalArn='arn:aws:iam::XXX:role/XXX',
             #                                             policyArn='arn:aws:eks::aws:cluster-access-policy/AmazonEKSAdminPolicy',
             #                                             accessScope={
             #                                                 'type': 'cluster'
