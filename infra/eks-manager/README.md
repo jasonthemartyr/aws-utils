@@ -2,6 +2,16 @@
 
 Intented use for this lambda and IaC is to manage and enforce required daemonsets/pods for all EKS clusters within an org. Right now `index.py` is only listing pods but it can easily be swapped for a deployment/daemonset.
 
+```mermaid
+flowchart TD
+    A[GitHub Workflow] -->|Send Payload| B[Lambda]
+    B --> C{Check ARN in Access Policy}
+    C -->|No| D[Create/Update Access Policy]
+    D --> E[Associate Policy with EKS Cluster]
+    C -->|Yes| F[Assume Role]
+    E --> F
+    F --> G[Perform K8's action]
+```
 
 ## Notes
 
